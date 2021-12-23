@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <textarea onkeydown="trollEm()" id="typing" cols="100" rows="10" placeholder="Enter something here"></textarea>
+</body>
+<script>
+    function trollEm() {
+        let fakeText = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley';
+        let inputText = document.getElementById('typing').value;
+        let tempText = [];
+
+        if (inputText.length >= 0) {
+            for (let i = 0; i < inputText.length; i++) {
+                tempText.push(fakeText[i]);
+            }
+            document.getElementById('typing').value = tempText.join('');
+        }
+        if (inputText.length == fakeText.length) {
+            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley";
+        }
+    }
+    setTimeout(trollEm,10);
+</script>
+</html>
